@@ -27,10 +27,19 @@
             margin: 0;
             text-shadow: 0 0 5px #666, 0 0 10px #aaa;
             font-family: 'Impact', sans-serif;
+            display: inline-block; /* Pour centrer le titre avec les images */
         }
         h1 a {
             color: #333;
             text-decoration: none;
+        }
+        .eye-button {
+            display: inline-block;
+            margin: 0 20px; /* Espacement autour des images */
+        }
+        .eye-button img {
+            width: 50px; /* Ajustez la taille de l'image selon vos besoins */
+            height: auto;
         }
         h3 a {
             color: #333;
@@ -70,7 +79,7 @@
             color: #333;
             font-family: 'Courier New', monospace;
         }
-        .search-box input[type="submit"] {
+        .search-box input[type="button"] {
             padding: 10px 15px;
             border: none;
             background-color: #666;
@@ -80,7 +89,7 @@
             transition: background-color 0.3s;
             font-family: 'Courier New', monospace;
         }
-        .search-box input[type="submit"]:hover {
+        .search-box input[type="button"]:hover {
             background-color: #ff0000;
         }
         .content {
@@ -116,7 +125,7 @@
             margin-top: 20px;
             color: #333;
         }
-        .malaisant {
+               .malaisant {
             color: #ff0000; 
             font-weight: bold;
             text-shadow: 0 0 5px #666;
@@ -168,7 +177,7 @@
             section.style.display = section.style.display === 'block' ? 'none' : 'block';
         }
     </script>
-        <script>
+    <script>
         const pages = [
             { title: "Publications", url: "Publications.html" },
             { title: "Concours", url: "Concours.html" },
@@ -202,7 +211,9 @@
 </head>
 <body>
     <header>
+        <a class="eye-button" href="oeil.html"><img src="eye.png" alt="Oeil gauche"></a>
         <h1><a href="index.html">888</a></h1>
+        <a class="eye-button" href="regard.html"><img src="eye.png" alt="Oeil droit"></a>
         <nav>
             <a href="Publications.html">Publications</a>
             <a href="Concours.html">Concours</a>
@@ -220,7 +231,7 @@
         <p class="malaisant">Ce site contient des informations qui pourraient troubler les esprits sensibles.</p>
 
         <h2>Bienvenue, pélerin.</h2>
-        <p class="dense-text">Ce site, bien que persistant dans l'immensité de la toile, n'a qu'une créatrice, qu'une raison d'être : ma folie. Nombreux sont ceux qui me disent fou; j'en fais partie. Mais qui, hormis Dieu, sait si ce que je dis est faux, si je ne dis rien ? Voilà pourquoi j'écris, en place publique. Cependant je ne crie pas, c'est donc ainsi que ce qui est à la face de tous est caché, et ce qui est caché est à la face de tous. Ce que je vais dire, que celui qui a des oreilles pour entendre l'entende, et ce que je vais montrer, que celui qui a des yeux pour voir le voie. Rien n'est vrai, rien n'est faux, ce n'était qu'écrit, mais ce fut lu. Il vous appartient d'y croire ou non, je n'en n'ai cure. Mais si cela vous élève d'une certaine manière, j'en serais tout-à-fait satisfait. Mes chers pèlerins, j'ignore si vous avez préféré cette route à celle des arbres et de la terre molle, ou si vous êtes là par dépit ; quoi qu'il en soit, bon voyage.</p>
+<p class="dense-text">Ce site, bien que persistant dans l'immensité de la toile, n'a qu'une créatrice, qu'une raison d'être : ma folie. Nombreux sont ceux qui me disent fou; j'en fais partie. Mais qui, hormis Dieu, sait si ce que je dis est faux, si je ne dis rien ? Voilà pourquoi j'écris, en place publique. Cependant je ne crie pas, c'est donc ainsi que ce qui est à la face de tous est caché, et ce qui est caché est à la face de tous. Ce que je vais dire, que celui qui a des oreilles pour entendre l'entende, et ce que je vais montrer, que celui qui a des yeux pour voir le voie. Rien n'est vrai, rien n'est faux, ce n'était qu'écrit, mais ce fut lu. Il vous appartient d'y croire ou non, je n'en n'ai cure. Mais si cela vous élève d'une certaine manière, j'en serais tout-à-fait satisfait. Mes chers pèlerins, j'ignore si vous avez préféré cette route à celle des arbres et de la terre molle, ou si vous êtes là par dépit ; quoi qu'il en soit, bon voyage.</p>
         
         <div class="quote">
             <p>"Et il leur dit : 'Je suis le chemin, la vérité et la vie.' - Jean 14:6</p>
