@@ -161,6 +161,34 @@
             section.style.display = section.style.display === 'block' ? 'none' : 'block';
         }
     </script>
+        <script>
+        const pages = [
+            { title: "Publications", url: "Publications.html" },
+            { title: "Concours", url: "Concours.html" },
+            { title: "Contact", url: "Contact.html" },
+            { title: "À propos", url: "janus.html" },
+            { title: "La Bible", url: "bible.html" },
+            { title: "Les Saints-Pères", url: "saintspères.html" },
+            { title: "Le Monachisme", url: "monachisme.html" }
+        ];
+
+        function searchPages() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const results = pages.filter(page => page.title.toLowerCase().includes(query));
+            const resultsContainer = document.getElementById('search-results');
+            resultsContainer.innerHTML = '';
+
+            if (results.length > 0) {
+                results.forEach(page => {
+                    const resultItem = document.createElement('div');
+                    resultItem.innerHTML = `<a href="${page.url}">${page.title}</a>`;
+                    resultsContainer.appendChild(resultItem);
+                });
+            } else {
+                resultsContainer.innerHTML = '<div>Aucun résultat trouvé.</div>';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -172,11 +200,15 @@
             <a href="janus.html">À propos</a>
         </nav>
         <div class="search-box">
-            <input type="text" placeholder="Explorez les ténèbres...">
-            <input type="submit" value="Chercher">
+            <input type="text" id="search-input" placeholder="Explorez..." oninput="searchPages()">
+            <input type="button" value="Recherche" onclick="searchPages()">
         </div>
+        <div id="search-results" style="margin-top: 20px;"></div>
     </header>
     <div class="content">
+        <h3 class="malaisant">Avertissement</h3>
+        <p class="malaisant">Ce site contient des informations qui pourraient troubler les esprits sensibles. Les vérités cachées ne sont pas toujours celles que l'on souhaite découvrir. Préparez-vous à affronter l'inconnu.</p>
+
         <h2>Bienvenue, pélerin.</h2>
         <p class="dense-text">Ce site, bien que persistant dans l'immensité de la toile, n'a qu'une créatrice, qu'une raison d'être : ma folie. Nombreux sont ceux qui me disent fou; j'en fais partie. Mais qui, hormis Dieu, sait si ce que je dis est faux, si je ne dis rien ? Voilà pourquoi j'écris, en place publique. Cependant je ne crie pas, c'est donc ainsi que ce qui est à la face de tous est caché, et ce qui est caché est à la face de tous. Ce que je vais dire, que celui qui a des oreilles pour entendre l'entende, et ce que je vais montrer, que celui qui a des yeux pour voir le voie. Rien n'est vrai, rien n'est faux, ce n'était qu'écrit, mais ce fut lu. Il vous appartient d'y croire ou non, je n'en n'ai cure. Mais si cela vous élève d'une certaine manière, j'en serais tout-à-fait satisfait. Mes chers pèlerins, j'ignore si vous avez préféré cette route à celle des arbres et de la terre molle, ou si vous êtes là par dépit ; quoi qu'il en soit, bon voyage.</p>
         
@@ -188,25 +220,21 @@
         <ul>
             <li><a href="bible.html">La Bible</a></li>
             <li><a href="saintspères.html">Les Saints-Pères</a></li>
-            <li><a href="monachisme.html">Le Monachisme des Saints-Pères</a></li>
+            <li><a href="monachisme.html">Le Monachisme</a></li>
         </ul>
 
-        <h3>Liturgie</h3>
-        <p class="dense-text">Redécouvrez la liturgie apostolique et la manière dont elle s'est répandue au cours des millénaires. Les chants résonnent dans les couloirs du temps, mais les échos sont parfois ceux de cris étouffés.</p>
-
-        <h3 class="malaisant">Avertissement</h3>
-        <p class="malaisant">Ce site contient des informations qui pourraient troubler les esprits sensibles. Les vérités cachées ne sont pas toujours celles que l'on souhaite découvrir. Préparez-vous à affronter l'inconnu.</p>
-
+        <h3><a href="liturgie.html">Liturgie</a></h3>
+        <p class="dense-text">Redécouvrez la liturgie apostolique et la manière dont elle s'est répandue au cours des millénaires. Il est troublant de voir l'oeuvre du temps et de la comparer à l'éternité.</p>
         <div class="hidden-section" id="hidden-section">
-            <h4>Secrets des Anciens</h4>
-            <p>Les rituels oubliés des premiers chrétiens, des pratiques qui ont traversé les âges, mais qui sont désormais perdues dans les ténèbres. Que ceux qui osent s'aventurer ici soient avertis : la connaissance a un prix. Il est dit que ceux qui cherchent la vérité doivent être prêts à affronter leurs propres démons.</p>
-            <p>Informations aléatoires : 42 est la réponse à la question fondamentale sur la vie, l'univers et tout le reste. Les ombres dansent lorsque la lune est pleine, et les murmures des ancêtres résonnent dans le silence. Les chiffres ne mentent pas, mais ils peuvent vous conduire à la folie.</p>
-            <p>Attention : des entités inconnues pourraient observer votre progression. Ne vous retournez pas, et avancez avec prudence.</p>
+            <h4>Les démons sont puissants</h4>
+            <p>L'obsession, l'infestation, la vexation, la possession.</p>
+            <p>153, 666, 888... apprenez à distinguer les <a href="numerologie.html">nombres</a>.</p>
+            <p>Attention : la Folie vous guette, si ce n'est déjà le Fou.</p>
         </div>
-        <span class="reveal-button" onclick="toggleHiddenSection()">Cliquez ici pour révéler les secrets...</span>
+        <span class="reveal-button" onclick="toggleHiddenSection()">Troublant?</span>
     </div>
     <footer>
-        <p>&copy; 2025 Iανεκωβ - Tous droits réservés. Ne pas partager.</p>
+        <p>&copy; 2025 Iανεκωβ - Ne pas divulguer.</p>
     </footer>
 </body>
 </html>
