@@ -18,6 +18,8 @@
             padding: 30px;
             border-bottom: 2px solid crimson;
             position: relative;
+            background: rgba(0, 0, 0, 0.9);
+            box-shadow: 0 0 20px black;
         }
         h1 {
             font-size: 64px;
@@ -47,24 +49,6 @@
             color: white; 
             text-shadow: 0 0 10px white;
         }
-        .content {
-            padding: 40px;
-            max-width: 800px;
-            margin: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-            border: 1px solid crimson;
-            border-radius: 10px;
-            box-shadow: 0 0 20px black;
-            position: relative;
-            overflow: hidden;
-        }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 16px;
-            border-top: 1px solid crimson;
-            padding: 10px 0;
-        }
         .search-box {
             margin: 20px 0;
             text-align: center;
@@ -89,12 +73,36 @@
         .search-box input[type="submit"]:hover {
             background-color: #ff4d4d;
         }
+        .content {
+            padding: 40px;
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 1px solid crimson;
+            border-radius: 10px;
+            box-shadow: 0 0 20px black;
+            position: relative;
+            overflow: hidden;
+            line-height: 1.5;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 16px;
+            border-top: 1px solid crimson;
+            padding: 10px 0;
+        }
         .quote {
             font-style: italic;
             color: #ffcc00;
             margin-top: 20px;
             border-left: 2px solid crimson;
             padding-left: 10px;
+        }
+        .malaisant {
+            color: #ffcc00;
+            font-weight: bold;
+            text-shadow: 0 0 5px crimson;
         }
         .hidden-section {
             display: none;
@@ -110,9 +118,11 @@
             text-decoration: underline;
             margin-top: 10px;
         }
-        .malaisant {
+        .dense-text {
+            font-size: 18px;
+            line-height: 1.4;
+            margin-top: 20px;
             color: #ffcc00;
-            font-weight: bold;
             text-shadow: 0 0 5px crimson;
         }
     </style>
@@ -132,16 +142,15 @@
             <a href="Contact.html">Contact</a>
             <a href="janus.html">À propos</a>
         </nav>
-    </header>
-        <div class="content">
-        <h2>Bienvenue, pélerin.</h2>
-        <p>Ce site, bien que persistant dans l'immensité de la toile, n'a qu'une créatrice, qu'une raison d'être : ma folie. Nombreux sont ceux qui me disent fou; j'en fais partie. Mais qui, hormis Dieu, sait si ce que je dis est faux, si je ne dis rien ? Voilà pourquoi j'écris, en place publique. Cependant je ne crie pas, c'est donc ainsi que ce qui est à la face de tous est caché, et ce qui est caché est à la face de tous. Ce que je vais dire, que celui qui a des oreilles pour entendre l'entende, et ce que je vais montrer, que celui qui a des yeux pour voir le voie. Rien n'est vrai, rien n'est faux, ce n'était qu'écrit, mais ce fut lu. Il vous appartient d'y croire ou non, je n'en n'ai cure. Mais si cela vous élève d'une certaine manière, j'en serais tout-à-fait satisfait. Mes chers pèlerins, j'ignore si vous avez préféré cette route à celle des arbres et de la terre molle, ou si vous êtes là par dépit ; quoi qu'il en soit, bon voyage.</p>
-        
         <div class="search-box">
-            <input type="text" placeholder="Explorez...">
+            <input type="text" placeholder="Explorez les ténèbres...">
             <input type="submit" value="Chercher">
         </div>
-
+    </header>
+    <div class="content">
+        <h2>Bienvenue, pélerin.</h2>
+        <p class="dense-text">Ce site, bien que persistant dans l'immensité de la toile, n'a qu'une créatrice, qu'une raison d'être : ma folie. Nombreux sont ceux qui me disent fou; j'en fais partie. Mais qui, hormis Dieu, sait si ce que je dis est faux, si je ne dis rien ? Voilà pourquoi j'écris, en place publique. Cependant je ne crie pas, c'est donc ainsi que ce qui est à la face de tous est caché, et ce qui est caché est à la face de tous. Ce que je vais dire, que celui qui a des oreilles pour entendre l'entende, et ce que je vais montrer, que celui qui a des yeux pour voir le voie. Rien n'est vrai, rien n'est faux, ce n'était qu'écrit, mais ce fut lu. Il vous appartient d'y croire ou non, je n'en n'ai cure. Mais si cela vous élève d'une certaine manière, j'en serais tout-à-fait satisfait. Mes chers pèlerins, j'ignore si vous avez préféré cette route à celle des arbres et de la terre molle, ou si vous êtes là par dépit ; quoi qu'il en soit, bon voyage.</p>
+        
         <div class="quote">
             <p>"Et il leur dit : 'Je suis le chemin, la vérité et la vie.' - Jean 14:6</p>
         </div>
@@ -154,20 +163,20 @@
         </ul>
 
         <h3>Liturgie</h3>
-        <p>Redécouvrez la liturgie apostolique et la manière dont elle s'est répandue au cours des millénaires.</p>
+        <p class="dense-text">Redécouvrez la liturgie apostolique et la manière dont elle s'est répandue au cours des millénaires. Les chants résonnent dans les couloirs du temps, mais les échos sont parfois ceux de cris étouffés.</p>
 
         <h3 class="malaisant">Avertissement</h3>
-        <p class="malaisant">Ce site contient des informations qui pourraient troubler les esprits sensibles. Les vérités ne sont pas toujours celles que l'on souhaite découvrir.</p>
+        <p class="malaisant">Ce site contient des informations qui pourraient troubler les esprits sensibles. Les vérités cachées ne sont pas toujours celles que l'on souhaite découvrir. Préparez-vous à affronter l'inconnu.</p>
 
         <div class="hidden-section" id="hidden-section">
             <h4>Secrets des Anciens</h4>
-            <p>Les rituels oubliés des premiers chrétiens, des pratiques qui ont traversé les âges, mais qui sont désormais perdues dans les ténèbres. Que ceux qui osent s'aventurer ici soient avertis : la connaissance a un prix.</p>
-            <p>Il est dit que ceux qui cherchent la vérité doivent être prêts à affronter leurs propres démons.</p>
+            <p>Les rituels oubliés des premiers chrétiens, des pratiques qui ont traversé les âges, mais qui sont désormais perdues dans les ténèbres. Que ceux qui osent s'aventurer ici soient avertis : la connaissance a un prix. Il est dit que ceux qui cherchent la vérité doivent être prêts à affronter leurs propres démons.</p>
         </div>
-        <span class="reveal-button" onclick="toggleHiddenSection()">Cliquez ici pour révéler</span>
+        <span class="reveal-button" onclick="toggleHiddenSection()">Cliquez ici pour révéler les secrets...</span>
     </div>
     <footer>
-        <p>&copy; 2025 Iανεκωβ - Tous droits réservés. Ne pas diffuser.</p>
+        <p>&copy; 2025 Iανεκωβ - Tous droits réservés. Ne pas partager.</p>
     </footer>
 </body>
 </html>
+
