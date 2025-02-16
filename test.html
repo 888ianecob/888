@@ -24,6 +24,15 @@
             margin: 0;
             text-shadow: 0 0 10px crimson, 0 0 20px black;
         }
+        h1 a {
+            color: crimson;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        h1 a:hover {
+            color: white;
+            text-shadow: 0 0 10px white;
+        }
         nav {
             margin: 20px 0;
         }
@@ -46,6 +55,8 @@
             border: 1px solid crimson;
             border-radius: 10px;
             box-shadow: 0 0 20px black;
+            position: relative;
+            overflow: hidden;
         }
         footer {
             text-align: center;
@@ -85,19 +96,44 @@
             border-left: 2px solid crimson;
             padding-left: 10px;
         }
+        .hidden-section {
+            display: none;
+            background-color: rgba(255, 0, 0, 0.1);
+            border: 1px solid crimson;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .reveal-button {
+            cursor: pointer;
+            color: crimson;
+            text-decoration: underline;
+            margin-top: 10px;
+        }
+        .malaisant {
+            color: #ffcc00;
+            font-weight: bold;
+            text-shadow: 0 0 5px crimson;
+        }
     </style>
+    <script>
+        function toggleHiddenSection() {
+            const section = document.getElementById('hidden-section');
+            section.style.display = section.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>888</h1>
+        <h1><a href="index.html">888</a></h1>
         <nav>
             <a href="Publications.html">Publications</a>
             <a href="Concours.html">Concours</a>
             <a href="Contact.html">Contact</a>
-            <a href="janus.html">A propos</a>
+            <a href="janus.html">À propos</a>
         </nav>
     </header>
-    <div class="content">
+        <div class="content">
         <h2>Bienvenue, pélerin.</h2>
         <p>Ce site, bien que persistant dans l'immensité de la toile, n'a qu'une créatrice, qu'une raison d'être : ma folie. Nombreux sont ceux qui me disent fou; j'en fais partie. Mais qui, hormis Dieu, sait si ce que je dis est faux, si je ne dis rien ? Voilà pourquoi j'écris, en place publique. Cependant je ne crie pas, c'est donc ainsi que ce qui est à la face de tous est caché, et ce qui est caché est à la face de tous. Ce que je vais dire, que celui qui a des oreilles pour entendre l'entende, et ce que je vais montrer, que celui qui a des yeux pour voir le voie. Rien n'est vrai, rien n'est faux, ce n'était qu'écrit, mais ce fut lu. Il vous appartient d'y croire ou non, je n'en n'ai cure. Mais si cela vous élève d'une certaine manière, j'en serais tout-à-fait satisfait. Mes chers pèlerins, j'ignore si vous avez préféré cette route à celle des arbres et de la terre molle, ou si vous êtes là par dépit ; quoi qu'il en soit, bon voyage.</p>
         
@@ -119,9 +155,19 @@
 
         <h3>Liturgie</h3>
         <p>Redécouvrez la liturgie apostolique et la manière dont elle s'est répandue au cours des millénaires.</p>
+
+        <h3 class="malaisant">Avertissement</h3>
+        <p class="malaisant">Ce site contient des informations qui pourraient troubler les esprits sensibles. Les vérités ne sont pas toujours celles que l'on souhaite découvrir.</p>
+
+        <div class="hidden-section" id="hidden-section">
+            <h4>Secrets des Anciens</h4>
+            <p>Les rituels oubliés des premiers chrétiens, des pratiques qui ont traversé les âges, mais qui sont désormais perdues dans les ténèbres. Que ceux qui osent s'aventurer ici soient avertis : la connaissance a un prix.</p>
+            <p>Il est dit que ceux qui cherchent la vérité doivent être prêts à affronter leurs propres démons.</p>
+        </div>
+        <span class="reveal-button" onclick="toggleHiddenSection()">Cliquez ici pour révéler</span>
     </div>
     <footer>
-        <p>&copy; 2025 Iανεκωβ - Tous droits réservés. Ne pas partager.</p>
+        <p>&copy; 2025 Iανεκωβ - Tous droits réservés. Ne pas diffuser.</p>
     </footer>
 </body>
 </html>
